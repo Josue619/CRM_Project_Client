@@ -1,0 +1,41 @@
+<div class="container col-10">
+
+    <br>
+    <h1>Top 10 de últimos soportes</h1>
+    <br>
+
+    <div class="form-group row  mx-auto justify-content-center">
+        <form #listvForm=ngForm class="form-inline my-2 my-lg-0" (ngSubmit)="searchSupports()">
+            <input class="form-control mr-sm-2" type="search" name="search" id="search" [(ngModel)]="form.search"
+                placeholder="Buscar..." aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="form-group row  mx-auto justify-content-center">
+
+        <table class="table table-striped table-bordered" style="text-align:center">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Soporte</th>
+                    <th>Encargado</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+
+            <tbody style="text-align:center">
+                <tr
+                    *ngFor="let support of Service.supports; let i = index">
+                    <td class="text-light items" scope="row">{{i+1}}</td>
+                    <td class="text-light items"> {{support.support}} </td>
+                    <td class="text-light items"> {{support.in_charge}} </td>
+                    <td class="text-light items"> {{support.f_support | date:'yyyy-MM-dd'}} </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

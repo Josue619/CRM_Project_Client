@@ -5,21 +5,22 @@
         <div class="sidebar-heading"> Menú lateral</div>
         <div class="list-group list-group-flush">
 
-            <a routerLink="file" class="list-group-item list-group-item-action bg-light" (click)="sideBar()"> <i
-                    class="fad fa-folder-open icono"></i>Expediente</a>
-
             <div class="dropdown">
                 <button class="list-group-item list-group-item-action bg-light dropdown-toggle" type="button"
                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-cabinet-filing icono"></i>Informes
+                    <i class="fad fa-folder-open icono"></i>Expediente
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" routerLink="report/binnacle" (click)="sideBar()"> <i
-                            class="fad fa-clipboard-list icono"></i>Bitácora</a>
-                    <a class="dropdown-item" routerLink="report/events" (click)="sideBar()"> <i
-                            class="fal fa-calendar-alt icono"></i>Eventos</a>
-                    <a class="dropdown-item" routerLink="report/send" (click)="sideBar()"> <i
-                            class="fas fa-upload icono"></i>Enviar Reportes</a>
+                    <a class="dropdown-item" routerLink="requests" (click)="sideBar()"> <i
+                            class="fas fa-question-circle icono"></i>Solicitudes</a>
+                    <a class="dropdown-item" routerLink="services" (click)="sideBar()"> <i
+                            class="fas fa-users-cog icono"></i>Servicios</a>
+                    <a class="dropdown-item" routerLink="supports" (click)="sideBar()"> <i
+                            class="fas fa-tools icono"></i>Soportes</a>
+                    <a class="dropdown-item" routerLink="needs" (click)="sideBar()"> <i
+                            class="fas fa-user-clock icono"></i>Necesidades</a>
+                    <a class="dropdown-item" routerLink="notes" (click)="sideBar()"> <i
+                            class="far fa-clipboard-list-check icono"></i>Notas</a>
                 </div>
             </div>
 
@@ -55,7 +56,8 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="login" *ngIf="!loggedIn">Login <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" routerLink="login" *ngIf="!loggedIn">Login <span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" routerLink="profile" *ngIf="loggedIn">Profile</a>
