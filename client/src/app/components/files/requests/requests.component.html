@@ -25,13 +25,12 @@
             </thead>
 
             <tbody style="text-align:center">
-                <tr *ngFor="let req of Service.requests | paginate: { itemsPerPage: 8, currentPage: pageActual }; let i = index">
-                    <td class="text-light items" scope="row">{{i+1}}</td>
-                    <td class="text-light items">{{req.query}} </td>
-                    <td class="text-light items">{{req.solution}}</td>
+                <tr *ngFor="let req of Service.requests | paginate: { itemsPerPage: 5, currentPage: pageActual }; let i = index">
+                    <td class="text-light" scope="row">{{i+1}}</td>
+                    <td class="text-light">{{req.query}} </td>
+                    <td class="text-light">{{req.solution}}</td>
 
                     <td class="text-info">
-                        <br>
                         <button class="{{priority(req.priority_color)}} btn-binnacle">
                             <i class="far fa-flag"></i>
                         </button>

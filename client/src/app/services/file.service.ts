@@ -40,6 +40,10 @@ export class FileService {
     return this.http.get(`${this.baseFileUrl}/requests/${id}`, {headers: this.headers});
   }
 
+  addRequest(data): Observable<RequestC> {
+    return this.http.post(`${this.baseFileUrl}/request`, data, {headers: this.headers});
+  }
+
   /** ------------------------------------------- Services Routs ---------------------------------- */
 
   searchServices(data): Observable<ServiceC> {

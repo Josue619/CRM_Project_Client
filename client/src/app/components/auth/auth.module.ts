@@ -9,16 +9,20 @@ import { AuthService } from '../../services/auth.service';
 import { TokenService } from '../../services/token.service';
 import { AfterLoginService } from '../../services/after-login.service';
 import { BeforeLoginService } from '../../services/before-login.service';
+import { ProfileComponent } from '../profile/profile.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, ProfileComponent],
   imports: [
     CommonModule,
     FormsModule,
     AuthRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [ MainService, AuthService, TokenService, AfterLoginService, BeforeLoginService ]
 })
